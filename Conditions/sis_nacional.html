@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(https://wallpapers.com/images/hd/world-map-4k-currencies-92i2s39f715nhw4j.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        input{
+            width: 100%;
+            margin: 10px;
+            padding: 5px;
+            background-color: rgba(160, 17, 17, 0.342);
+            color: white;
+
+
+        }
+
+        #btn{
+            font-weight: bold;
+            cursor: pointer;
+            background-color: rgba(160, 17, 17, 0.342);
+            color: white;
+
+        }
+
+        .container{
+            width: 600px;
+            height: 50%;
+            margin: 0 auto;
+            background: linear-gradient(rgba(148, 4, 4, 0.473) , rgba(148, 4, 4, 0.473) );
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur (10px);
+            border-radius: 20px;
+            box-shadow: 0px 0px 32px 0 rgba(0, 0, 0, 0.048);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            color: white; 
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>sistema de nacionalidades</h1>
+        Qual o seu nome?<input type="name" id="nome" value="nome" onclick="nome">
+        Você é de que nacionalidade?<input type="name" id="port"> 
+        <input type="button" id="btn" value="verificar" onclick="verificar()">
+        <div id="res">
+            Verificacão
+        </div>
+        
+    </div>
+    
+</body>
+
+<script>
+
+ 
+    function verificar(){
+        var  nome = document.getElementById('nome').value
+        port = document.getElementById('port')
+        var res = document.getElementById('res')
+        var pais = port.value
+        if(pais == 'Portugal'){
+            res.innerHTML = `Olá ${nome} Você é de ${pais}`;
+        } else {
+            res.innerHTML = ` Olá ${nome} Você não é de Portugal você pertence ao   ${pais} entao  voce vai ser deportado `
+        }
+    }
+       
+</script>
+</html>

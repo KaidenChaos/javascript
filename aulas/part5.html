@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Html </title>
+  <style>
+    #msg{
+      background-color: green;
+      color: white;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    cursor: pointer;
+
+    }
+  </style>
+</head>
+<body>
+   <div id="msg" onclick="clicar()" onmouseleave="sair()" onmouseenter="entrar()" ondblclick="doubleClick()">
+       Clique ou
+    interaja
+   </div>
+
+
+
+   <script>
+    let  msg = document.getElementById("msg")
+    function clicar(){
+        msg.innerText = "Clickou"
+        msg.style.backgroundColor = "blue"
+        msg.style.color = "Orange"
+    }
+
+    function sair(){
+        msg.innerText = "saiu"
+        msg.style.backgroundColor = "green"
+        msg.style.color = "Cyan"
+    }
+
+    function entrar(){
+        msg.innerText = "entrou"
+        msg.style.backgroundColor = "red"
+        msg.style.color = "Yellow"
+    }
+
+    function doubleClick(){
+        msg.innerText = "double click"
+        msg.style.backgroundColor = "black"
+        msg.style.color = "yellow"
+    }
+    
+   </script>
+</body>
+</html>

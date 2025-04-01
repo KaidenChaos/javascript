@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Valores </title>
+
+  </style>
+</head>
+<body>
+    <h1>Soma de Valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="soma" onclick="soma()">
+
+    <div id="res" >
+        Resultado
+
+    </div>
+  <script>
+function soma(){
+    let res = document.getElementById("res")
+    let txtn1 = document.getElementById("txtn1")
+    let txtn2 = document.getElementById("txtn2")
+    let n1 = Number(txtn1.value)
+    let n2 = Number(txtn2.value)
+    let soma = n1 + n2
+    res.innerHTML += `A soma entre ${n1} e ${n2} é igual a ${soma}`
+}
+
+
+  </script>
+</body>
+</html>

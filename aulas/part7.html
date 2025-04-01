@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(https://images.pexels.com/photos/31197737/pexels-photo-31197737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        input{
+            width: 100%;
+            margin: 10px;
+            padding: 5px;
+
+        }
+
+        #btn{
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        .container{
+            width: 600px;
+            height: 50%;
+            margin: 0 auto;
+            background: linear-gradient(rgba(255, 255, 255, 0.1) , rgba(255, 255, 255, 0) );
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur (10px);
+            border-radius: 20px;
+            box-shadow: 0px 0px 32px 0 rgba(0, 0, 0, 0.048);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            color: white; 
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>sistema de multas</h1>
+
+        velocidade do carro<input type="number" id="txtvel"> km/h
+        <input type="button" id="btn" value="verificar" onclick="verificar()">
+        <div id="res">
+            resultado
+        </div>
+        
+    </div>
+    
+</body>
+
+<script>
+ 
+
+    function verificar(){
+        txtvel = document.getElementById('txtvel')
+        var res = document.getElementById('res')
+        var vel = Number(txtvel.value)
+        res.innerHTML = `<p> a sua velocidade é de: ${vel} km/h</p>`
+        if (vel > 60) {
+            res.innerHTML = `<p> voce ultrapassou a velocidade permitida você foi multado</p>`
+        }else{
+            res.innerHTML = `<p>   voce esta dentro da velocidade permitida, conduza sempre usando o cinto de segurança</p>`
+        }
+    }
+</script>
+</html>
